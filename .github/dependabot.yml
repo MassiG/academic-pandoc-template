@@ -5,7 +5,13 @@
 
 version: 2
 updates:
-  - package-ecosystem: "pnpm" # See documentation for possible values
-    directory: "/" # Location of package manifests
+  # For pnpm, use "npm" as the package-ecosystem value
+  # See: https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file#package-ecosystem
+  - package-ecosystem: 'npm'
+    directory: '/'
     schedule:
-      interval: "weekly"
+      interval: 'weekly'
+  - package-ecosystem: 'github-actions'
+    directory: '/'
+    schedule:
+      interval: 'weekly'
